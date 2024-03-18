@@ -4,15 +4,11 @@
 - Requirements:
 	- Ruby
 	- github-linguist: ```gem install github-linguist```
+    - all packages in the requirements.txt file: ```pip install -r requirements.txt```
 
 ### Execution
-Copy the resulting file from the Crawler to the ```repos``` folder, then run:
-- ```python analyze_repo.py```
-
-Output the repo links to a ``repos.csv`` file with:
-- ``python output_repo.py``
-
-After the manual filtering, run:
-- ```python analyze_results.py``` with optional parameters ```-f include.csv -s 5```
-	- ```-f``` the filter file containing the manually filtered repositories
-	- ```-s``` include only the repositories with this minimum number of microservices
+put in the  ```repos``` folder the .csv file containing one git repo per link, be sure that the link are in https format, then run:
+- ```python analyze_repo_multi_thread.py```
+- the possible options are ```-d -w 10```
+	- ```-w``` the number of threads to use, if not specified the number of threads will follow the threadpoolexecutor default value
+    - ```-d``` debug mode: in this mode the number of threads is set to 1 and the output is printed to the console

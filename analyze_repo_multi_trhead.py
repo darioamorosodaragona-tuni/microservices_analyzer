@@ -577,4 +577,4 @@ def main(argv):
     analyze_all(fix_errors=fix_errors, debug=debug, max_workers=num_workers)
 
 if __name__ == "__main__":
-    main(sys.argvp[1:])
+    main(sys.argv[1:])
