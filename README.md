@@ -8,7 +8,7 @@
     - follow the todo in the ```analyze_repo_multi_thread.py``` file and set the email and pswd to receive the notification email at the end of the execution
 
 ### Execution
-put in the  ```repos``` folder the .csv file containing one git repo per link, be sure that the link are in https format, then run:
+put in the  ```repos``` folder the .csv file containing one git repo per line, be sure that the links are in https format, then run:
 - ```python analyze_repo_multi_thread.py```
 - the possible options are ```-d -w 10```
 	- ```-w``` the number of threads to use, if not specified the number of threads will follow the threadpoolexecutor default value
